@@ -231,6 +231,19 @@ section{scroll-margin-top:80px}
 .book p{font-size:12px;line-height:1.6;color:var(--muted);flex:1}
 .book .cta{margin-top:14px;min-height:42px;font-size:10px;border-radius:11px}
 
+/* Livres sur téléphone : 2 par ligne, côte à côte */
+@media(max-width:640px){
+  .books{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .book{border-radius:14px}
+  .book img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
+  .book-body{padding:10px}
+  .book-num{font-size:8px}
+  .book h3{font-size:12px;margin:3px 0 5px}
+  .book p{font-size:10px;line-height:1.5}
+  .book .cta{min-height:36px;font-size:8.5px;padding:8px 4px;margin-top:10px}
+  .book:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - 5px)}
+}
+
 /* ========== COMPTE ========== */
 .account{
   position:relative;overflow:hidden;border-radius:30px;padding:46px 36px;color:#fff;
